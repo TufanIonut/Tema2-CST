@@ -1,0 +1,25 @@
+<div class="background">
+  <div class="top">
+    <div class="left">
+      <h1 class="title">Yoga Classes</h1>
+      <div class="subtitle">Get unlimited access to 200+ workouts including bodybalance, Vinyasa, Ashtanga and Yin Yoga</div>
+      <a class="button" href="https://www.youtube.com/watch?v=hPr-Yc92qaY" target="_blank" >Start free trial</a>
+    </div>
+
+    <div class="right">
+      <img src="../assets/yoga_1920x1080.jpg" alt="">
+    </div>
+  </div>
+
+  <div class="body">
+    <div class="cards-container">
+      <app-card *ngFor="let plan1 of plans" [plan]="plan1"></app-card>
+    </div>
+  </div>
+  
+  <div>
+    <h1 class="table-title">Trainers</h1>
+  </div>
+   
+  <app-table></app-table>
+</div>

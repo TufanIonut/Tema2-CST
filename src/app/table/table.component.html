@@ -1,0 +1,22 @@
+<nz-table #filterTable  [nzData]="listOfData" nzTableLayout="fixed">
+    <thead>
+      <tr>
+        <th 
+        *ngFor="let column of listOfColumn; trackBy: trackByName" 
+        [(nzSortOrder)]="column.sortOrder"
+        [nzSortFn]="column.sortFn"
+        [nzFilters]="column.listOfFilter"
+        [nzFilterFn]="column.filterFn">
+            {{column.name}}
+        </th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let data of filterTable.data">
+        <td>{{data.name}}</td>
+        <td>{{data.age}}</td>
+        <td>{{data.address}}</td>
+        <td>{{data.courses}}</td>
+      </tr>
+    </tbody>
+  </nz-table>
